@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#011f14" />
+      <stop offset="50%" stop-color="#023020" />
+      <stop offset="100%" stop-color="#00140c" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9D2" />
+      <stop offset="35%" stop-color="#D3AF37" />
+      <stop offset="70%" stop-color="#C9921A" />
+      <stop offset="100%" stop-color="#7B5608" />
+    </linearGradient>
+    <radialGradient id="recGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFF9D2" stop-opacity="0.45" />
+      <stop offset="30%" stop-color="#D3AF37" stop-opacity="0.2" />
+      <stop offset="70%" stop-color="#023020" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#00140c" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)" />
+  <circle cx="400" cy="190" r="260" fill="url(#recGlow)" />
+
+  <!-- Iconic Lighthouse Beacon Rays Sweeping the Horizon -->
+  <polygon points="400,175 100,60 100,120" fill="url(#gold)" opacity="0.3" filter="url(#glow)" />
+  <polygon points="400,175 700,60 700,120" fill="url(#gold)" opacity="0.3" filter="url(#glow)" />
+  <polygon points="400,175 50,220 50,300" fill="url(#gold)" opacity="0.15" />
+  <polygon points="400,175 750,220 750,300" fill="url(#gold)" opacity="0.15" />
+
+  <!-- The Monument of Recognition & Crown -->
+  <g filter="url(#glow)">
+    <!-- Crown of Distinction -->
+    <polygon points="360,110 375,130 400,105 425,130 440,110 435,145 365,145" fill="url(#gold)" />
+    <circle cx="360" cy="105" r="3" fill="#FFF9D2" />
+    <circle cx="400" cy="98" r="4" fill="#FFFFFF" />
+    <circle cx="440" cy="105" r="3" fill="#FFF9D2" />
+
+    <!-- Radiant Beacon Core -->
+    <circle cx="400" cy="175" r="26" fill="url(#gold)" />
+    <circle cx="400" cy="175" r="14" fill="#FFFFFF" filter="url(#glow)" />
+
+    <!-- Pillar / Tower Base -->
+    <polygon points="370,205 430,205 445,340 355,340" fill="#011f14" stroke="url(#gold)" stroke-width="2.5" />
+    <polygon points="380,215 420,215 430,330 370,330" fill="url(#gold)" opacity="0.35" />
+
+    <!-- Base Steps -->
+    <rect x="330" y="340" width="140" height="15" rx="3" fill="url(#gold)" />
+    <rect x="300" y="355" width="200" height="18" rx="3" fill="url(#gold)" opacity="0.8" />
+  </g>
+
+  <!-- Recognition Radar Rings (Expanding outward) -->
+  <circle cx="400" cy="175" r="90" stroke="url(#gold)" stroke-width="1.5" stroke-dasharray="4 6" fill="none" opacity="0.4" />
+  <circle cx="400" cy="175" r="150" stroke="url(#gold)" stroke-width="1" stroke-dasharray="3 7" fill="none" opacity="0.25" />
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#011f14" />
+      <stop offset="50%" stop-color="#023020" />
+      <stop offset="100%" stop-color="#00140c" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9D2" />
+      <stop offset="35%" stop-color="#D3AF37" />
+      <stop offset="70%" stop-color="#C9921A" />
+      <stop offset="100%" stop-color="#7B5608" />
+    </linearGradient>
+    <radialGradient id="magnetAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9D2" stop-opacity="0.4" />
+      <stop offset="25%" stop-color="#D3AF37" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#023020" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#00140c" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)" />
+  <circle cx="400" cy="225" r="260" fill="url(#magnetAura)" />
+
+  <!-- Magnetic Resonance Crosshairs -->
+  <line x1="120" y1="225" x2="680" y2="225" stroke="url(#gold)" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4 6" />
+  <line x1="400" y1="50" x2="400" y2="400" stroke="url(#gold)" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4 6" />
+
+  <!-- Precision Concentric Target Rings -->
+  <g stroke="url(#gold)" fill="none">
+    <circle cx="400" cy="225" r="160" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="3 5" />
+    <circle cx="400" cy="225" r="120" stroke-width="1.5" stroke-opacity="0.5" />
+    <circle cx="400" cy="225" r="80" stroke-width="2" stroke-opacity="0.75" />
+    <circle cx="400" cy="225" r="40" stroke-width="2.5" />
+  </g>
+
+  <!-- Radiant Magnetic Bullseye Center -->
+  <g filter="url(#glow)">
+    <circle cx="400" cy="225" r="20" fill="url(#gold)" />
+    <circle cx="400" cy="225" r="8" fill="#FFFFFF" />
+
+    <!-- Inward Attracting Particle Vectors -->
+    <line x1="280" y1="130" x2="350" y2="180" stroke="#FFF9D2" stroke-width="2" stroke-dasharray="4 4" />
+    <polygon points="355,185 342,175 350,170" fill="#FFF9D2" />
+
+    <line x1="520" y1="130" x2="450" y2="180" stroke="#FFF9D2" stroke-width="2" stroke-dasharray="4 4" />
+    <polygon points="445,185 450,170 458,175" fill="#FFF9D2" />
+
+    <line x1="280" y1="320" x2="350" y2="270" stroke="#FFF9D2" stroke-width="2" stroke-dasharray="4 4" />
+    <polygon points="355,265 350,280 342,275" fill="#FFF9D2" />
+
+    <line x1="520" y1="320" x2="450" y2="270" stroke="#FFF9D2" stroke-width="2" stroke-dasharray="4 4" />
+    <polygon points="445,265 458,275 450,280" fill="#FFF9D2" />
+  </g>
+
+  <!-- Converging High-Value Audience Stars -->
+  <circle cx="280" cy="130" r="3.5" fill="#FFF9D2" filter="url(#glow)" />
+  <circle cx="520" cy="130" r="3.5" fill="#FFF9D2" filter="url(#glow)" />
+  <circle cx="280" cy="320" r="3.5" fill="#FFF9D2" filter="url(#glow)" />
+  <circle cx="520" cy="320" r="3.5" fill="#FFF9D2" filter="url(#glow)" />
+  <circle cx="200" cy="225" r="2.5" fill="#CFFFDC" />
+  <circle cx="600" cy="225" r="2.5" fill="#CFFFDC" />
+</svg>

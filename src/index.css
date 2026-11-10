@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+  @apply bg-[#023020] text-sparknest-mint;
+}
+}
+
+@layer utilities {
+  .text-gradient {
+  @apply bg-gradient-to-r from-sparknest-mint to-[#D3AF37] bg-clip-text text-transparent;
+}
+}
+
+/* ─── Cursor Trail Canvas ─────────────────────────────────────────── */
+
+#cursor-trail-canvas {
+  /* Fixed so it covers the full viewport at all scroll positions */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Sit behind React content but above the body background */
+  z-index: 0;
+
+  /* Never intercept clicks or hovers */
+  pointer-events: none;
+
+  /* Transparent background — the page shows through */
+  background: transparent;
+}
+

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#011f14" />
+      <stop offset="50%" stop-color="#023020" />
+      <stop offset="100%" stop-color="#00140c" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9D2" />
+      <stop offset="35%" stop-color="#D3AF37" />
+      <stop offset="70%" stop-color="#C9921A" />
+      <stop offset="100%" stop-color="#7B5608" />
+    </linearGradient>
+    <radialGradient id="sysAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D3AF37" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#023020" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#00140c" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)" />
+  <circle cx="400" cy="225" r="260" fill="url(#sysAura)" />
+
+  <!-- The Golden Ratio Spiral / Geometric Matrix -->
+  <g stroke="url(#gold)" stroke-width="1.5" fill="none" opacity="0.4" stroke-dasharray="3 5">
+    <rect x="250" y="110" width="300" height="185" />
+    <rect x="365" y="110" width="185" height="185" />
+    <rect x="365" y="180" width="115" height="115" />
+    <circle cx="400" cy="225" r="160" />
+    <circle cx="400" cy="225" r="110" />
+  </g>
+
+  <!-- Golden Ratio Spiral Curve -->
+  <path d="M 250 295 A 185 185 0 0 1 435 110 A 115 115 0 0 1 550 225 A 70 70 0 0 1 480 295 A 45 45 0 0 1 435 250" 
+        stroke="url(#gold)" stroke-width="2.5" fill="none" filter="url(#glow)" />
+
+  <!-- Floating Design System Color Swatches & Typographic Prisms -->
+  <g filter="url(#glow)">
+    <!-- Swatch 1: Emerald -->
+    <rect x="210" y="270" width="70" height="70" rx="8" fill="#023020" stroke="url(#gold)" stroke-width="2" />
+    <circle cx="245" cy="305" r="12" fill="#07501B" />
+
+    <!-- Swatch 2: Gold Centerpiece -->
+    <rect x="365" y="190" width="70" height="70" rx="8" fill="#011f14" stroke="url(#gold)" stroke-width="2.5" />
+    <circle cx="400" cy="225" r="16" fill="url(#gold)" />
+
+    <!-- Swatch 3: Mint Accent -->
+    <rect x="520" y="270" width="70" height="70" rx="8" fill="#023020" stroke="url(#gold)" stroke-width="2" />
+    <circle cx="555" cy="305" r="12" fill="#CFFFDC" />
+  </g>
+
+  <!-- Typographic Alignment Guides & Calipers -->
+  <line x1="160" y1="180" x2="640" y2="180" stroke="url(#gold)" stroke-width="1" stroke-opacity="0.3" />
+  <line x1="160" y1="270" x2="640" y2="270" stroke="url(#gold)" stroke-width="1" stroke-opacity="0.3" />
+  
+  <!-- Anchor Points -->
+  <circle cx="210" cy="270" r="3.5" fill="#FFF9D2" />
+  <circle cx="280" cy="270" r="3.5" fill="#FFF9D2" />
+  <circle cx="520" cy="270" r="3.5" fill="#FFF9D2" />
+  <circle cx="590" cy="270" r="3.5" fill="#FFF9D2" />
+</svg>

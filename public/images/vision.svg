@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#011f14" />
+      <stop offset="50%" stop-color="#023020" />
+      <stop offset="100%" stop-color="#00140c" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5B8" />
+      <stop offset="40%" stop-color="#D3AF37" />
+      <stop offset="80%" stop-color="#C9921A" />
+      <stop offset="100%" stop-color="#7B5608" />
+    </linearGradient>
+    <radialGradient id="lensGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF2A3" stop-opacity="0.5" />
+      <stop offset="30%" stop-color="#D3AF37" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#C9921A" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#023020" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)" />
+  <circle cx="400" cy="225" r="280" fill="url(#lensGlow)" />
+
+  <!-- Constellation and Horizon Lines -->
+  <line x1="100" y1="225" x2="700" y2="225" stroke="url(#gold)" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4 8" />
+  <line x1="400" y1="40" x2="400" y2="410" stroke="url(#gold)" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4 8" />
+
+  <!-- Expanding Horizon Perspective Cone -->
+  <polygon points="400,225 100,50 700,50" fill="url(#gold)" opacity="0.05" />
+  <polygon points="400,225 150,400 650,400" fill="url(#gold)" opacity="0.05" />
+
+  <!-- Celestial Vision Eye & Concentric Rings -->
+  <g filter="url(#glow)">
+    <circle cx="400" cy="225" r="140" stroke="url(#gold)" stroke-width="1.5" fill="none" opacity="0.4" />
+    <circle cx="400" cy="225" r="100" stroke="url(#gold)" stroke-width="2" fill="none" opacity="0.7" />
+    <circle cx="400" cy="225" r="60" stroke="url(#gold)" stroke-width="2.5" fill="none" />
+    <circle cx="400" cy="225" r="18" fill="url(#gold)" />
+    <circle cx="400" cy="225" r="6" fill="#FFFFFF" />
+
+    <!-- Vision Arcs (Stylized Eye Motif) -->
+    <path d="M 240 225 Q 400 130 560 225 Q 400 320 240 225 Z" stroke="url(#gold)" stroke-width="2.5" fill="none" opacity="0.85" />
+    <path d="M 290 225 Q 400 160 510 225 Q 400 290 290 225 Z" stroke="url(#gold)" stroke-width="1" fill="none" opacity="0.4" />
+  </g>
+
+  <!-- Stars & Guiding Lights -->
+  <circle cx="280" cy="120" r="2.5" fill="#FFF5B8" filter="url(#glow)" />
+  <circle cx="520" cy="120" r="2.5" fill="#FFF5B8" filter="url(#glow)" />
+  <circle cx="210" cy="300" r="2" fill="#D3AF37" />
+  <circle cx="590" cy="300" r="2" fill="#D3AF37" />
+  <circle cx="340" cy="80" r="1.5" fill="#CFFFDC" />
+  <circle cx="460" cy="80" r="1.5" fill="#CFFFDC" />
+  <circle cx="400" cy="370" r="2" fill="#FFF5B8" />
+</svg>

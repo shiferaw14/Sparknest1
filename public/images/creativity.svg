@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#011f14" />
+      <stop offset="50%" stop-color="#023020" />
+      <stop offset="100%" stop-color="#00140c" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8C7" />
+      <stop offset="35%" stop-color="#D3AF37" />
+      <stop offset="70%" stop-color="#C9921A" />
+      <stop offset="100%" stop-color="#7B5608" />
+    </linearGradient>
+    <linearGradient id="mintBeam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A3" />
+      <stop offset="50%" stop-color="#CFFFDC" />
+      <stop offset="100%" stop-color="#D3AF37" />
+    </linearGradient>
+    <radialGradient id="prismAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D3AF37" stop-opacity="0.4" />
+      <stop offset="40%" stop-color="#023020" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#00140c" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)" />
+  <circle cx="400" cy="225" r="260" fill="url(#prismAura)" />
+
+  <!-- Incoming Cohesive Inspiration Beam -->
+  <line x1="120" y1="225" x2="350" y2="225" stroke="url(#mintBeam)" stroke-width="4" filter="url(#glow)" />
+
+  <!-- The Creative Prism (Triangle with internal refraction facets) -->
+  <g filter="url(#glow)">
+    <polygon points="400,105 480,265 320,265" fill="#011f14" stroke="url(#gold)" stroke-width="3" />
+    <polygon points="400,105 400,265 320,265" fill="url(#gold)" opacity="0.25" />
+    <polygon points="400,105 480,265 400,265" fill="url(#gold)" opacity="0.4" />
+    <!-- Inner glowing core -->
+    <polygon points="400,150 440,240 360,240" stroke="url(#mintBeam)" stroke-width="1.5" fill="none" opacity="0.8" />
+  </g>
+
+  <!-- Refracted Creative Beams Outward -->
+  <g filter="url(#glow)">
+    <polygon points="450,225 680,110 680,130 450,230" fill="url(#gold)" opacity="0.75" />
+    <polygon points="460,235 700,180 700,200 460,240" fill="url(#mintBeam)" opacity="0.85" />
+    <polygon points="465,245 710,250 710,270 465,250" fill="url(#gold)" opacity="0.8" />
+    <polygon points="460,255 690,320 690,340 460,260" fill="url(#gold)" opacity="0.65" />
+    <polygon points="450,265 670,390 670,410 450,270" fill="url(#mintBeam)" opacity="0.5" />
+  </g>
+
+  <!-- Sparkles of Invention -->
+  <circle cx="580" cy="120" r="2.5" fill="#FFF8C7" />
+  <circle cx="620" cy="190" r="3" fill="#CFFFDC" filter="url(#glow)" />
+  <circle cx="650" cy="260" r="2.5" fill="#FFF8C7" />
+  <circle cx="600" cy="330" r="2" fill="#D3AF37" />
+  <circle cx="400" cy="90" r="2" fill="#FFF8C7" />
+</svg>

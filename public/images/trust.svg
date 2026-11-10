@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#011f14" />
+      <stop offset="50%" stop-color="#023020" />
+      <stop offset="100%" stop-color="#00140c" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9D2" />
+      <stop offset="35%" stop-color="#D3AF37" />
+      <stop offset="70%" stop-color="#C9921A" />
+      <stop offset="100%" stop-color="#7B5608" />
+    </linearGradient>
+    <radialGradient id="trustAura" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#D3AF37" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#023020" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#00140c" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)" />
+  <circle cx="400" cy="225" r="260" fill="url(#trustAura)" />
+
+  <!-- Architectural Pillars of Integrity -->
+  <g stroke="url(#gold)" stroke-width="1.5" stroke-opacity="0.35">
+    <line x1="240" y1="120" x2="240" y2="360" />
+    <line x1="270" y1="120" x2="270" y2="360" />
+    <line x1="530" y1="120" x2="530" y2="360" />
+    <line x1="560" y1="120" x2="560" y2="360" />
+    <line x1="200" y1="360" x2="600" y2="360" stroke-width="2" />
+  </g>
+
+  <!-- The Heraldic Shield of Trust -->
+  <g filter="url(#glow)">
+    <!-- Outer Shield Border -->
+    <path d="M 400 110 L 510 140 C 510 240, 480 300, 400 350 C 320 300, 290 240, 290 140 Z" 
+          fill="#011f14" stroke="url(#gold)" stroke-width="3" />
+    
+    <!-- Inner Inset Shield -->
+    <path d="M 400 135 L 485 160 C 485 240, 460 285, 400 325 C 340 285, 315 240, 315 160 Z" 
+          fill="url(#gold)" opacity="0.2" stroke="url(#gold)" stroke-width="1.5" />
+
+    <!-- Core Vault Lock / Keystone Symbol -->
+    <circle cx="400" cy="215" r="28" fill="url(#gold)" />
+    <circle cx="400" cy="215" r="14" fill="#011f14" />
+    <polygon points="395,215 405,215 408,245 392,245" fill="#011f14" />
+    
+    <!-- Golden Core Light -->
+    <circle cx="400" cy="215" r="5" fill="#FFF9D2" filter="url(#glow)" />
+  </g>
+
+  <!-- Laurel sprigs of honor -->
+  <path d="M 330 290 Q 280 230 310 170" stroke="url(#gold)" stroke-width="1.5" fill="none" opacity="0.6" stroke-dasharray="3 5" />
+  <path d="M 470 290 Q 520 230 490 170" stroke="url(#gold)" stroke-width="1.5" fill="none" opacity="0.6" stroke-dasharray="3 5" />
+
+  <!-- Stars of Authenticity -->
+  <circle cx="400" cy="85" r="3" fill="#FFF9D2" filter="url(#glow)" />
+  <circle cx="370" cy="95" r="2" fill="#D3AF37" />
+  <circle cx="430" cy="95" r="2" fill="#D3AF37" />
+</svg>
