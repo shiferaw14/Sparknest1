@@ -7,7 +7,7 @@ export function About() {
       number: '01',
       title: 'THE SPARK',
       description: 'The strategic WHY Data driven insight and visionary thinking that ensures a brand has a reason to exist.',
-      image: '/public/spark.png',
+      image: '/images/spark.png',
       delay: 0.2,
     },
     {
