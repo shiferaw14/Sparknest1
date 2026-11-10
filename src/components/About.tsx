@@ -14,14 +14,14 @@ export function About() {
       number: '02',
       title: 'THE NEST',
       description: 'The tactical HOW The protective environment where we build visual, verbal, and physical touchpoints for growth.',
-      image: '/public/nest.png',
+      image: '/images/nest.png',
       delay: 0.4,
     },
     {
       number: '03',
       title: 'THE FLIGHT',
       description: 'The outcome Every successful brand begins with an idea, develops into a strong identity, and grows into market leadership.',
-      image: '/public/flight.png',
+      image: '/images/flight.png',
       delay: 0.6,
     },
   ]

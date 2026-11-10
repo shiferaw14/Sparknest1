@@ -6,22 +6,22 @@ export function Philosophy() {
     {
       title: 'CREATIVITY',
       description: 'Thinking outside the box to make your brand stand out.',
-      image: '/public/creativity.png',
+      image: '/images/creativity.png',
     },
     {
       title: 'QUALITY',
       description: 'Delivering top notch work every time.',
-      image: '/public/quality.png',
+      image: '/images/quality.png',
     },
     {
       title: 'COLLABORATION',
       description: 'Working closely with clients to bring their ideas to life.',
-      image: '/public/collabration.png',
+      image: '/images/collabration.png',
     },
     {
       title: 'TRUST',
       description: 'Being honest and reliable in everything we do.',
-      image: '/public/trust.png',
+      image: '/images/trust.png',
     },
   ]
 
@@ -55,7 +55,7 @@ export function Philosophy() {
           >
             <div>
               <PopoutImage
-                src="/public/mission.png"
+                src="/images/mission.png"
                 alt="SparkNest Mission"
                 heightClass="h-52"
                 className="mb-6"
@@ -78,7 +78,7 @@ export function Philosophy() {
           >
             <div>
               <PopoutImage
-                src="/public/vision.png"
+                src="/images/vision.png"
                 alt="SparkNest Vision"
                 heightClass="h-52"
                 className="mb-6"

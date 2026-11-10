@@ -17,7 +17,7 @@ export function Services() {
     {
       number: '02',
       title: 'VISUAL SYSTEMS',
-      image: '/public/visual.png',
+      image: '/images/visual.png',
       items: [
         'Comprehensive Logo Suites',
         'Emotive Color Theory (HEX/RGB/CMYK)',
@@ -28,7 +28,7 @@ export function Services() {
     {
       number: '03',
       title: '360° TOUCHPOINTS',
-      image: '/public/360.png',
+      image: '/images/360.png',
       items: [
         'Web Design & UI/UX Development',
         'Digital Presence & Social Media Kits',
