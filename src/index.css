@@ -6,35 +6,93 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-  @apply bg-[#023020] text-sparknest-mint;
-}
+    @apply bg-[#023020] text-sparknest-mint;
+  }
 }
 
 @layer utilities {
   .text-gradient {
-  @apply bg-gradient-to-r from-sparknest-mint to-[#D3AF37] bg-clip-text text-transparent;
-}
+    @apply bg-gradient-to-r from-sparknest-mint to-[#D3AF37] bg-clip-text text-transparent;
+  }
 }
 
-/* ─── Cursor Trail Canvas ─────────────────────────────────────────── */
+/* ─── Cursor Glow Spotlight ──────────────────────────────────────────── */
 
-#cursor-trail-canvas {
-  /* Fixed so it covers the full viewport at all scroll positions */
+/*
+  .cursor-glow-layer is a fixed full-viewport div.
+  CSS custom properties --gx / --gy are updated each animation frame
+  by CursorGlow.tsx to position the spotlight precisely.
+*/
+.cursor-glow-layer {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  /* Sit behind React content but above the body background */
-  z-index: 0;
-
-  /* Never intercept clicks or hovers */
+  inset: 0;
+  z-index: 1;
   pointer-events: none;
-
-  /* Transparent background — the page shows through */
-  background: transparent;
+  --gx: -9999px;
+  --gy: -9999px;
+  background:
+    radial-gradient(
+      180px circle at var(--gx) var(--gy),
+      rgba(201, 146, 26, 0.20) 0%,
+      transparent 100%
+    ),
+    radial-gradient(
+      500px circle at var(--gx) var(--gy),
+      rgba(207, 255, 220, 0.07) 0%,
+      transparent 100%
+    );
 }
 
+/* ─── Custom cursor dot ──────────────────────────────────────────────── */
+
+/*
+  Hide the system cursor site-wide.
+  CursorGlow.tsx injects a <div id="cursor-dot"> that follows the mouse.
+*/
+html, * {
+  cursor: none !important;
+}
+
+#cursor-dot {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #C9921A;
+  box-shadow: 0 0 10px 4px rgba(201, 146, 26, 0.65);
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.15s ease, height 0.15s ease, box-shadow 0.15s ease;
+  will-change: left, top;
+}
+
+#cursor-dot.cursor-active {
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 0 18px 6px rgba(201, 146, 26, 0.75);
+}
+
+/* ─── Ensure main content sits above the glow layer ─────────────────── */
+
+nav, main, section, footer, header {
+  position: relative;
+  z-index: 2;
+}
+
+/* ─── Card hover glow enhancement ───────────────────────────────────── */
+
+.group:hover {
+  box-shadow:
+    0 0 0 1px rgba(201, 146, 26, 0.45),
+    0 0 30px 6px  rgba(201, 146, 26, 0.18),
+    0 0 70px 14px rgba(207, 255, 220, 0.06) !important;
+}
+
+/* ─── Interactive element glow ───────────────────────────────────────── */
+
+a:hover, button:hover {
+  text-shadow: 0 0 10px rgba(201, 146, 26, 0.45);
+}
