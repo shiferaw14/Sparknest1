@@ -11,6 +11,9 @@ export function OurPromise() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold font-['Gungsuh'] text-[#FFFFFF] mb-12 leading-tight">
+            We don't just create visual identities. We build the systems, experiences, and strategies that empower businesses to grow with confidence.
+          </h2>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
